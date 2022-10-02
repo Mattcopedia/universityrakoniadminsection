@@ -66,7 +66,7 @@ export default function Sidebar() {
                
 
             
-                  <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                  <FlexRow2 margin={`0px 0px 33px 0px`} >
                   <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
                       <div className='text-xs leading-4 flex flex-row pr-11 mr-9 text-white focus:text-red-500 hover:text-red-500'>
                  
@@ -75,7 +75,7 @@ export default function Sidebar() {
                     <Image2 src={`https://file.rendit.io/n/G3F4PilonKjmmoO3vusP.svg`}  /> 
                       <Text2>Student</Text2> 
                     </button>
-                    <div className="dropdown-content">
+                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')} >
                       <Link to="/activate">Activate</Link>
                       <Link to="/unblock">Unblock</Link>
                       <Link to="/update-fees">fees</Link>
@@ -89,7 +89,7 @@ export default function Sidebar() {
                     <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
                   </FlexRow2>
  
-                  <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                  <FlexRow2 margin={`0px 0px 33px 0px`} >
                   <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
                       <div className='text-xs leading-4 flex flex-row pr-11 mr-9 text-white focus:text-red-500 hover:text-red-500'>
                       <div className="dropdown ">
@@ -97,7 +97,7 @@ export default function Sidebar() {
                     <Image2 src={`https://file.rendit.io/n/oPso6bQAGSo5jamPAFQx.svg`} /> 
                     <Text2>Lecturer</Text2> 
                     </button>
-                    <div className="dropdown-content">
+                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
                     <Link to="/lecturer-activate">Activate</Link>
                       <Link to="/lecturer-list">Lecturer List</Link>
                       <Link to="/create-account">Create Account</Link>
@@ -112,19 +112,19 @@ export default function Sidebar() {
           
 
                
-                  <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                  <FlexRow2 margin={`0px 0px 33px 0px`} >
                   <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
                       <div className='text-xs leading-4 flex flex-row pr-12 mr-0.5 text-white focus:text-red-500 hover:text-red-500'>
-                      <div className="dropdown ">
+                      <div className="dropdown " >
                     <button className="dropbtn flex flex-row">
                     <Image2 src={`https://file.rendit.io/n/TjbIpolco2NXf4vdOE1s.svg`} /> 
                     <Text2>Master Sheet</Text2> 
                     </button> 
-                    <div className="dropdown-content">
+                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
                       <Link to="/master-sheet">Master Sheet</Link>
                       <Link to="/master-sheetmode">Master Sheet Mode</Link>
                     </div>
-                  </div> 
+                  </div>  
                       </div> 
                     <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
                   </FlexRow2>

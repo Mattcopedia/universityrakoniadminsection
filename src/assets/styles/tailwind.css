@@ -2925,12 +2925,6 @@ video {
 	.lg\:pt-2{
 		padding-top: 0.5rem;
 	}
-	.lg\:pb-16{
-		padding-bottom: 4rem;
-	}
-	.lg\:pb-11{
-		padding-bottom: 2.75rem;
-	}
 }
 @media (min-width: 1280px){
 	.xl\:w-1\/6{

@@ -42,7 +42,7 @@ const ConfirmNewhandlePasswordChange =(event)=>{
      setNewPasswordType("text")
      return;
     }
-    setPasswordType("password")
+    setNewPasswordType("password")
   }
 
 
@@ -52,11 +52,11 @@ const ConfirmNewhandlePasswordChange =(event)=>{
      setConfirmNewPasswordType("text")
      return;
     }
-    setPasswordType("password")
+    setConfirmNewPasswordType("password")
   }
   return (
     <>
-    
+     
     <SettingsHeader />
   
     <div>
@@ -171,7 +171,7 @@ const ConfirmNewhandlePasswordChange =(event)=>{
                         <div className='flex flex-row border-gray-500 border-solid border rounded-md'>      
                         <input type={NewpasswordType} onChange={NewhandlePasswordChange} value={NewpasswordInput} style={{height:"44px"}} className='formshow' id="password"/>  
                         <div className='pt-2 pr-3' onClick={NewtogglePassword}>
-                         { passwordType==="password" ?<i class="fa-regular fa-eye"></i>: <i class="fa-regular fa-eye-slash"></i> }
+                         { NewpasswordType=== "password" ?<i class="fa-regular fa-eye"></i>: <i class="fa-regular fa-eye-slash"></i> }
                         </div>
                         </div>  
                         </FlexColumn2>  
@@ -182,7 +182,7 @@ const ConfirmNewhandlePasswordChange =(event)=>{
                             <div className='flex flex-row border-gray-500 border-solid border rounded-md'>      
                         <input type={ConfirmNewpasswordType} onChange={ConfirmNewhandlePasswordChange} value={ConfirmNewpasswordInput} style={{height:"44px"}} className='formshow' id="password"/>  
                         <div className='pt-2 pr-3' onClick={ConfirmNewtogglePassword}>
-                         { passwordType==="password" ?<i class="fa-regular fa-eye"></i>: <i class="fa-regular fa-eye-slash"></i> }
+                         { ConfirmNewpasswordType==="password" ? <i class="fa-regular fa-eye"></i>: <i class="fa-regular fa-eye-slash"></i> }
                         </div>
                         </div> 
                             </FlexColumn2> 

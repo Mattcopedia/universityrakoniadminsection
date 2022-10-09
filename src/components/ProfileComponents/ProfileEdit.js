@@ -84,11 +84,7 @@ const ProfileEdit = () => {
                  <input className='form' placeholder='Imam saka str,Lagos' type="text" id="address"/>  
                  </FlexColumn2>  
 
-                 <FlexColumn2 margin={`0px 0px 10px 0px`}> 
-
-                    <Text4 htmlFor="NIM"> NIM</Text4>         
-                    <input className='form' placeholder='NIM' type="text" id="NIM"/>   
-                    </FlexColumn2> 
+                
                  
                 <button className='purplebtn' type='submit'>Save</button> 
                 </form> 

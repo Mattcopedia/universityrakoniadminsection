@@ -49,7 +49,7 @@ const MasterSheet = () => {
 
             <div className="  flex flex-row gap-2 pl-9">
             <input type="radio" value="Swiss result" name="Status" />
-            <Text1>Swiss result</Text1>
+            <Text1>Siwes result</Text1>
             </div>
 
             <div className="  flex flex-row gap-2 pl-7 ">
@@ -166,6 +166,35 @@ const MasterSheet = () => {
 
                        </div>
 
+                       <div className='ml-3 flex justify-start'>
+  <EditProfileRoot>Computer Science department (100 leve) for 2020-2021 first semester</EditProfileRoot>
+  </div>
+  
+
+  <div className='justifyprint mt-7'> 
+  <RectangleRoot>
+      <p className='text-black cursor-pointer pt-1 px-4 text-center'>Cancel</p>   
+    </RectangleRoot>
+
+       <WhiteFlexRowRoot>
+      <FlexRowy>
+      <Image2 src={`https://file.rendit.io/n/6J0AJJdkS0U68RIpoRU7.svg`}  />
+        <Textz>Print</Textz>
+      </FlexRowy> 
+    </WhiteFlexRowRoot> 
+
+       <WhiteFlexRowRoot>
+      <FlexRowy>
+        <Image2 src={`https://file.rendit.io/n/UhNk3wBUdiJfroGB9Edm.svg`}   />
+        <Texty>Download</Texty>
+      </FlexRowy> 
+    </WhiteFlexRowRoot>  
+
+    
+
+    
+     </div>
+
 
     </div>
   )
@@ -279,6 +308,86 @@ const EditProfileRoot = styled.div`
   padding-top: 20px;
 `;
 
+
+
+
+
+const WhiteFlexRowRoot = styled.div`
+  width: 180px;
+  background-color: rgba(45, 3.32, 83, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 12px 0px;
+  margin-left: 20px; 
+  cursor: pointer;
+
+ 
+
+`;
+const FlexRowy = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+
+  @media ${devices.mobileL} { 
+    gap: 2px;
+  } 
+
+`;
+const Image2 = styled.img`
+  width: 16px;
+  height: 14px;
+  align-self: flex-end;
+  margin: 0px 0px 3px 0px;
+`;
+
+const Texty = styled.div`
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #2D0353;
+  cursor: pointer;
+
+  @media ${devices.mobileL} { 
+    width: 72px; 
+  } 
+
+`;
+
+const Textz = styled.div`
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  color: #2D0353;
+  cursor: pointer;
+
+  @media ${devices.mobileL} { 
+    width: 72px; 
+    padding-left:10px;
+  } 
+
+`;
+
+
+const RectangleRoot = styled.div`
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 170px;
+  height: 60px;
+  background-color: rgba(45, 3.32, 83, 0.1);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: 20px; 
+  // border-color: #fafafa;
+  // box-shadow: 3px 3px #888888;
+`;
 
 
 

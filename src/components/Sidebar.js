@@ -47,6 +47,13 @@ export default function Sidebar() {
                   <NavLink to="/" exact  >
                   <ImageRoot src={unigig}  /> 
                   </NavLink>
+     
+                  <NavLink to="/create-new-account" >
+                  <WhiteFlexRow>
+                <Image1a src={`https://file.rendit.io/n/7OUSS3WQDM8590MQKxa2.svg`} />
+                <Text2a>Create Account</Text2a> 
+              </WhiteFlexRow>
+              </NavLink>
 
                      <div className='focus:blue'>
                      <NavLink to="/" exact  >
@@ -77,11 +84,12 @@ export default function Sidebar() {
                     </button>
                     <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')} >
                       <Link to="/activate">Activate</Link>
+                      <Link to="/register-student">Register Student</Link>
+                      <Link to="/course-reg-stats">Registration Stats</Link>
                       <Link to="/unblock">Unblock</Link>
-                      <Link to="/update-fees">fees</Link>
                       <Link to="/biodata-correction">Biodata Correction</Link>
                       <Link to="/reset-studentpassword">Reset Password</Link>
-                      <Link to="/upload-student-doc">Upload Doc</Link>
+                      <Link to="/upload-student-doc">Restrospective Registration</Link>
                     </div>
                   </div> 
 
@@ -97,13 +105,14 @@ export default function Sidebar() {
                     <Image2 src={`https://file.rendit.io/n/oPso6bQAGSo5jamPAFQx.svg`} /> 
                     <Text2>Lecturer</Text2> 
                     </button>
-                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
+                    <div  className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
                     <Link to="/lecturer-activate">Activate</Link>
                       <Link to="/lecturer-list">Lecturer List</Link>
                       <Link to="/create-account">Create Account</Link>
                       <Link to="/lecturer-biodata">Biodata Correction</Link>
-                      <Link to="/amendment-approval">Amendment Approval</Link>
-                      <Link to="/result-upload-summary">Result Upload Summary</Link>
+                      <Link to="/reset-lecturer-password">Reset Password</Link>
+                      <Link to="/reset-upload-quota">Reset Upload Quota</Link>
+                     
                     </div>
                   </div> 
                       </div> 
@@ -128,16 +137,47 @@ export default function Sidebar() {
                       </div> 
                     <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
                   </FlexRow2>
+
+                  <FlexRow2 margin={`0px 0px 33px 0px`} >
+                  <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
+                      <div className='text-xs leading-4 flex flex-row pr-3 mr-0.5 text-white focus:text-red-500 hover:text-red-500'>
+                      <div className="dropdown " >
+                    <button className="dropbtn flex flex-row">
+                    <Image2 src={`https://file.rendit.io/n/GnPut5ckDFay6QEsO4n7.svg`}  /> 
+                    <Text2>Administrative Portal</Text2> 
+                    </button> 
+                    <div style={{overflowY: "scroll", height: "170px"}} className="dropdown-contentadmin" onClick={() => setShowSidebar('-left-64')}>
+                      <Link to="/setcountdown">Set Registration Countdown</Link>
+                      <Link to="/showresult">Show Result</Link>
+                      <Link to="/showlecturer">Show Lecturer</Link>
+                      <Link to="/public-service">Public Service Announcement</Link>
+                      <Link to="/public-service-edition">Public Service Edition</Link>
+                      <Link to="/activate-new-semester">Activate New Semester</Link>
+                      <Link to="/bulk-sms">Bulk Sms</Link>
+                      <Link to="/bulk-sms-edition">Bulk Sms Edition</Link>
+                      <Link to="/import-new-student">Import New Student</Link>
+                      <Link to="/create-new-department">Create New Department</Link>
+                      <Link to="/create-new-programme">Create New Programme</Link>
+                      <Link to="/create-new-course">Create New Course</Link>
+                    </div>
+
+                
+
+
+                  </div>  
+                      </div> 
+                    {/* <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} /> */}
+                  </FlexRow2>
              
 
                   <div className='focus:blue'>
-                     <NavLink to="/profile" exact  >
+                     <NavLink to="/settings-profile" exact  >
                   <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
-                    <NeonCarrotRectangle margin={`0px -9px 0px 0px`} />
+                    <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
                   
-                    <Image1 src={`https://file.rendit.io/n/N1mkyojAuiAvaDU7SG1I.svg`} />
+                    <Image1 src={`https://file.rendit.io/n/XsTeL2ZFeiX6rPItCZ1V.svg`} />
                     <Text2  margin={`0px 88px 0px 0px`}  >
-                      Profile</Text2> 
+                      Settings</Text2> 
              
                   </FlexRow2> 
                   </NavLink>   
@@ -271,8 +311,31 @@ const Image1 = styled.img`
 `;
 
 
+const WhiteFlexRow = styled.div`
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-end;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 11px 16px 11px 11px;
+  margin: 0px 0px 37px 0px;
+  margin-right:15px;
+`;
+const Image1a = styled.img`
+  width: 24px;
+  height: 24px;
+`;
 
-
-
+const Text2a = styled.div`
+  align-self: flex-end;
+  color: #2d0353;
+  font-size: 14px;
+  font-family: Product Sans Medium;
+  line-height: 21.21px;
+  white-space: nowrap;
+`;
 
 

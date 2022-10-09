@@ -30,7 +30,7 @@ export default function Dashboard() {
                   <Text10>Welcome Back</Text10>
                   <Text20>🚀</Text20>
                 </FlexRow>
-                <Text30>HOD Name <br className="responsivemodal"></br> </Text30>
+                <Text30>Admin Name <br className="responsivemodal"></br> </Text30>
               </FlexColumn>  
 
 
@@ -50,15 +50,6 @@ export default function Dashboard() {
               
           
                 <div class="flex flex-wrap gap-x-2 ml-6">
-  <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>Lecturers</Levelop>
-        <Element1op>24</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/s0thGrZ5M9N6SmKyCP0E.svg`} />
-    </RectangleRootRootop>
-    </div>
 
   <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 ">
   <RectangleRootRootop>
@@ -108,6 +99,15 @@ export default function Dashboard() {
     </RectangleRootRootop>
     </div>
 
+    <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
+  <RectangleRootRootop>
+      <FlexColumnop>
+        <Levelop>Total Lecturers</Levelop>
+        <Element1op>367</Element1op>
+      </FlexColumnop>
+      <Image1op src={`https://file.rendit.io/n/s0thGrZ5M9N6SmKyCP0E.svg`} />
+    </RectangleRootRootop>
+    </div>
 </div>
               
         
@@ -120,11 +120,11 @@ export default function Dashboard() {
                     <div className="flex justify-center text-6xl border-2   p-6 bg-gray-100   ">  
 
                     <NavLink to="/biodata-correction"> 
-                    <WhiteFlexColumnRoot1>
-                    <Image1 src={`https://file.rendit.io/n/1Ujdjkt4YPmR6GQvVrij.svg`} />
-                      <Text3>Biodata Correction</Text3>  
-                    </WhiteFlexColumnRoot1> 
-                    </NavLink>    
+                           <WhiteFlexColumnRoot1>
+                            <Image2 src={`https://file.rendit.io/n/Ug0DRo3A0kedp4xCa5Ua.svg`} />
+                            <Text2>Biodata Correction</Text2>
+                            </WhiteFlexColumnRoot1>   
+                            </NavLink>  
                   
                     </div> 
 
@@ -133,7 +133,7 @@ export default function Dashboard() {
                   
   <div className="flex  justify-center text-6xl border-2 bg-gray-100 p-6 ">
                         
-              <NavLink to="/activate"> 
+              <NavLink to="/upload-student-doc"> 
                         <WhiteFlexColumnRoot1> 
                        <Image2 src={`https://file.rendit.io/n/RfZB8C0HwERiS7g1b1Qm.svg`} />
                         <Text2>Retrospective Student</Text2>
@@ -214,7 +214,7 @@ export default function Dashboard() {
                            <div className="flex  justify-center text-6xl border-2 bg-gray-100 p-6 ">
                         
                            
-                           <NavLink to="/editpassword"> 
+                           <NavLink to="/reset-lecturer-password"> 
                         <WhiteFlexColumnRoot1> 
                        <Image2 src={`https://file.rendit.io/n/M623RGZnE7ubrrLY83sk.svg`} />
                         <Text2>Password reset</Text2>
@@ -257,11 +257,7 @@ export const devices = {
 };
 
 
-const Image1 = styled.img`
- 
-width: 64.52px;
-height: 46.95px;
-`;
+
 
 
 const WhiteFlexColumnRoot1 = styled.div`
@@ -294,15 +290,7 @@ font-family: Roboto;
 line-height: 27.09px;
 color: #2d0353; 
 `;
-const Text3 = styled.div`
-white-space: nowrap;
-display: inline-block;
-text-align: left;
-font-size: 18px;
-font-family: Roboto;
-line-height: 27.09px;
-color: #df8909;
-`;
+
 
 
 

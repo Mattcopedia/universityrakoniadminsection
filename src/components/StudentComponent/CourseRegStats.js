@@ -25,14 +25,7 @@ const CourseRegStats = () => {
     </div>
 
   {/* here */}
- 
-
-
-
-    <div className='flex flex-start pl-4'>
-        <EditProfileRoot>Analysis</EditProfileRoot>
-        </div> 
-        <div className='flex flex-row gap-2 justify-end mr-2'>
+  <div className='flex flex-row gap-2 justify-end mr-2'>
       <div className="box  pl-2 py-2">
       <select className='bg-gray-200'>
         <option selected>1st Semester 2020-2021 </option> 
@@ -55,14 +48,33 @@ const CourseRegStats = () => {
 
     </div>
 
+
+
+
     </div>
+
+
+
+    <div className='flex flex-start pl-4'>
+        <EditProfileRoot>Analysis</EditProfileRoot>
+        </div> 
     
     <div className="my-4 mx-2 flex justify-center">   
        <img width={1050} src={Stats} alt="statistics"/>  
        </div>  
 
-  
-    
+      <div className='flex justify-end '>
+       <div className="level  mr-5">
+      <select  className='bg-gray-200 '>
+        <option  selected>Level All </option> 
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+      </select> 
+ 
+    </div>
+    </div> 
 
 
     <div className='flex flex-start pl-4'>
@@ -144,6 +156,96 @@ const CourseRegStats = () => {
 
 
 
+<div className='flex justify-end '>
+       <div className="level  mr-5">
+      <select  className='bg-gray-200 '>
+        <option  selected>Level All </option> 
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+      </select> 
+ 
+    </div>
+    </div> 
+
+
+<div className='flex flex-start pl-4'>
+        <EditProfileRoot>Engineering</EditProfileRoot>
+        </div> 
+
+    <div style={{overflowX: "auto"}} className='bg-white mx-3 '> 
+       
+       <table className='Yourcoursereg mx-auto my-6' style={{width:"100%"}} >    
+   <tr style={{height:"40px", backgroundColor: "#e5e5e5"}}>
+      
+       <th style={{width:"15%",paddingLeft:"10px"}}>Level</th> 
+       <th style={{width:"20%"}}>Number of student</th> 
+       <th style={{width:"25%"}}>Number of Registered Students</th> 
+       <th style={{width:"20%"}}>Yet to Register</th> 
+       <th style={{width:"20%"}}>%Registered</th> 
+   </tr>    
+
+   <tr style={{height:"70px"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px" , backgroundColor: "#e5e5e5"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px", backgroundColor: "#e5e5e5"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px" , backgroundColor: "#e5e5e5"}}> 
+       <td style={{paddingLeft:"10px"}}><label for="firstcourse"> <Text3>100</Text3></label></td>
+       <td ><label for="firstcourse"><Text3>100</Text3></label></td>
+       <td><label for="firstcourse"><Text3>80</Text3></label></td>
+       <td><label for="firstcourse"><Text3>20</Text3></label></td>
+       <td><label for="firstcourse"><Text3>89%</Text3></label></td> 
+   </tr> 
+
+   <tr style={{height:"70px"}}> 
+     <td style={{paddingLeft:"10px"}} ><label for="firstcourse"> <Text4>Total Unit</Text4></label></td>
+       <td><label for="firstcourse"><Text4>108</Text4></label></td>
+       <td><label for="firstcourse"><Text4>88</Text4></label></td>
+       <td><label for="firstcourse"><Text4>750</Text4></label></td>
+       <td><label for="firstcourse"><Text4>90%</Text4></label></td> 
+   </tr>
+
+      </table>
+    
+
+</div>
 
 
 

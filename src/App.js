@@ -81,6 +81,26 @@ import LecturerBiodataProfile from 'components/LecturerComponent/LecturerBiodata
 import CourseAllocation from 'components/LecturerComponent/CourseAllocation';
 import AmendmentApprovalList from 'components/LecturerComponent/AmendmentapprovalList';
 import AmendmentApproval from 'components/LecturerComponent/AmendmentApproval';
+import ResetLecturerPassword from 'components/LecturerComponent/LecturerPassword';
+import CreateNewAccount from 'pages/CreateNewAccount';
+import ResetUploadQuota from 'components/LecturerComponent/ResetUploadquota';
+import SetCountDown from 'components/AdministrativePortal/SetCountDown';
+import ShowResult from 'components/AdministrativePortal/ShowResult';
+import ShowLecturer from 'components/AdministrativePortal/ShowLecturer';
+import PublicService from 'components/AdministrativePortal/PublicService';
+import PublicServiceEdition from 'components/AdministrativePortal/PublicServiceEdition';
+import ActivateNewSemester from 'components/AdministrativePortal/ActivateNewSemester';
+import BulkSmsEdition from 'components/AdministrativePortal/BulkSmsEdition';
+import BulkSms from "components/AdministrativePortal/BulkSms"
+import ImportNewStudent from 'components/AdministrativePortal/ImportNewStudent';
+import CreateNewDepartment from 'components/AdministrativePortal/CreateNewDepartment';
+import CreateNewProgram from 'components/AdministrativePortal/CreateNewProgram';
+import CreateNewCourse from 'components/AdministrativePortal/CreateNewCourse';
+import SettingsProfile from 'components/Settings/SettingsProfile';
+import SettingsContact from 'components/Settings/SettingsContact';
+import SettingsSocialMedia from 'components/Settings/SettingsSocialMedia';
+import SettingsChangePassword from 'components/Settings/ChangePassword';
+import DisplayPreference from 'components/Settings/DisplayPreference';
 
 
 
@@ -185,49 +205,26 @@ function App() {
             <Route exact path="/course-allocation" component={CourseAllocation} /> 
             <Route exact path="/amendment-approval" component={AmendmentApproval} /> 
             <Route exact path="/amendment-approval-list" component={AmendmentApprovalList} /> 
-            
-           
-         
-
-{/* 
-            padding at the left placeholder profile +++ more to be done
-
-            default will be unselected first checkbox coursereg  +++
-
-            push up profile info make the remaining 3 like the first one +++
-
-            align properly printout and they shouldn't touch the end of the screen
-
-            Course List and not List of Registered Courses. +++
-          
-            popup comes up after they click transfer form and not on Page load  +++
-          
-            align signature and date properly like on the Figma, +++ 
-
-            each page must have name of rakoni logo and university name.  
-
-            margin dont touch end of screen(including Text and icons )
-            and screen table should have enough space both outside and inbetween on different devices +++ continous improvement for this. 
-
-            cgpa GpaTool
-            he will give me the Cgpa logic
-
-            all the text in Course Form the text should be center. All text even course form should be centered. All First letter in Capital CASES. 
-
-            Apply all this to Other 
-
-            First-Semester-For 2020/2021 Academic Session. +++
-
-            Fully functional student module by next zoom demo.  
-
-            Make Demo myself from my laptop */}
-
-
-
-
-            
-           
-            
+            <Route exact path="/reset-lecturer-password" component={ResetLecturerPassword} /> 
+            <Route exact path="/create-new-account" component={CreateNewAccount} /> 
+            <Route exact path="/reset-upload-quota" component={ResetUploadQuota} />
+            <Route exact path="/setcountdown" component={SetCountDown} />
+            <Route exact path="/showresult" component={ShowResult} />
+            <Route exact path="/showlecturer" component={ShowLecturer} />
+            <Route exact path="/public-service" component={PublicService} />
+            <Route exact path="/public-service-edition" component={PublicServiceEdition} />
+            <Route exact path="/activate-new-semester" component={ActivateNewSemester} />
+            <Route exact path="/bulk-sms-edition" component={BulkSmsEdition} />
+            <Route exact path="/bulk-sms" component={BulkSms} />
+            <Route exact path="/import-new-student" component={ImportNewStudent} />  
+            <Route exact path="/create-new-department" component={CreateNewDepartment} />   
+            <Route exact path="/create-new-programme" component={CreateNewProgram} /> 
+            <Route exact path="/create-new-course" component={CreateNewCourse} /> 
+            <Route exact path="/settings-profile" component={SettingsProfile} /> 
+            <Route exact path="/settings-contact" component={SettingsContact} /> 
+            <Route exact path="/settings-social-media" component={SettingsSocialMedia} />  
+            <Route exact path="/settings-change-password" component={SettingsChangePassword} /> 
+            <Route exact path="/display-preference" component={DisplayPreference} />  
             
         </Switch>         
         </div> 

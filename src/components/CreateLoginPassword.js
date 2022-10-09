@@ -2,7 +2,7 @@
 
 import React, {useRef, useEffect, useState } from 'react'
 import styled from "styled-components";  
-import login from "../assets/img/HOD.PNG";
+import login from "../assets/img/Admin.PNG";
 import "./br.css"  
 import { useHistory } from "react-router-dom"; 
  

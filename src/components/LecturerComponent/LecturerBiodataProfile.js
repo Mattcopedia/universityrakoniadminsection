@@ -37,7 +37,8 @@ const LecturerBiodataProfile = () => {
         <Text4 htmlFor="email"> State of Origin </Text4>        
         <input className='form' placeholder='Ekiti' type="text" id="email"/>  
         </FlexColumn2>  
-
+         
+         <div className='flex flex-col pl-14 lg:pl-0'>
         <FlexColumn2 margin={`0px 0px 10px 0px`}> 
            <Text4 htmlFor="Role"> Role </Text4> 
                         <div className="boxaccount "> 
@@ -63,6 +64,7 @@ const LecturerBiodataProfile = () => {
                         </select> 
                              </div>
                          </FlexColumn2> 
+                         </div>
              
 
 
@@ -327,6 +329,7 @@ const ModalBody = styled.div`
      margin: 10% auto;
      padding: 20px; 
      width: 50%;
+    
      @media ${devices.tablet} {
         width: 90%;   
       } 
@@ -340,7 +343,7 @@ const ModalBody = styled.div`
 
 
 const WhiteFlexColumnRoot = styled.div`
-  height: 390px;
+  min-height: 500px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -401,6 +404,10 @@ const RoyalPurpleText = styled.div`
   border-radius: 6px;
   padding: 13px 0px 11px 0px;
   cursor: pointer;
+
+  @media ${devices.mobileL} { 
+    width: 100px;
+  } 
 `;
 
 
@@ -418,6 +425,9 @@ const RoyalPurpleTextw = styled.div`
   border-radius: 6px;
   padding: 13px 0px 11px 0px;
   cursor: pointer;
+  @media ${devices.mobileL} { 
+    width: 100px;
+  } 
 `;
 
 

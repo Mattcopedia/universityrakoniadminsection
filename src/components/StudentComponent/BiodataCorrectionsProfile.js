@@ -375,6 +375,9 @@ const RoyalPurpleText = styled.div`
   border-radius: 6px;
   padding: 13px 0px 11px 0px;
   cursor: pointer;
+  @media ${devices.mobileL} { 
+    width: 100px;
+  } 
 `;
 
 
@@ -392,6 +395,9 @@ const RoyalPurpleTextw = styled.div`
   border-radius: 6px;
   padding: 13px 0px 11px 0px;
   cursor: pointer;
+  @media ${devices.mobileL} { 
+    width: 100px;
+  } 
 `;
 
 

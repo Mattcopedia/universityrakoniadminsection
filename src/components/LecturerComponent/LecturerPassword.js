@@ -5,7 +5,7 @@ import "../br.css"
 import Sidebar from 'components/Sidebar';
  
 
-const ResetStudentPassword = () => {
+const ResetLecturerPassword = () => {
     const [shouldshow, setShouldshow] = useState(false);
  
     return  ( 
@@ -20,7 +20,7 @@ const ResetStudentPassword = () => {
         <Image2 src={`https://file.rendit.io/n/7I3yZRjpHsAGEb48rZcx.svg`} />
         <Text1>Successful</Text1>
         <Paragraph>
-          Student new password <br className="responsivemodal"></br>has been updated successfully{" "}
+          Lecturer new password <br className="responsivemodal"></br>has been updated successfully{" "}
         </Paragraph>
         <RoyalPurpleText onClick={() => setShouldshow(false)}>Ok</RoyalPurpleText>
       </FlexColumna>
@@ -47,7 +47,7 @@ const ResetStudentPassword = () => {
     </div> 
 
         <div className='mx-auto'>
-        <EditProfileRoot>Enter Student Details</EditProfileRoot>
+        <EditProfileRoot>Enter Lecturer Details</EditProfileRoot>
         </div>
 
         <section className=" mb-4 mx-auto body-font overflow-hidden bg-white"> 
@@ -69,14 +69,14 @@ const ResetStudentPassword = () => {
 
                     <FlexColumn2 margin={`0px 0px 10px 0px`}> 
 
-                 <Text4 onClick={() => setShouldshow(true)} htmlFor="studentId"> Student ID</Text4>        
-                 <input className='form'  type="text" id="studentid"/>  
+                 <Text4 onClick={() => setShouldshow(true)} htmlFor="studentId"> Lecturer ID</Text4>        
+                 <input className='form'  type="text" id="Lecturerid"/>  
                  </FlexColumn2>            
              
                  <FlexColumn2 margin={`0px 0px 10px 0px`}> 
 
-                 <Text4 htmlFor="studentemail"> Student Email</Text4>        
-                 <input className='form'  type="text" id="studentemail"/>  
+                 <Text4 htmlFor="Lectureremail"> Lecturer Email</Text4>        
+                 <input className='form'  type="text" id="Lectureremail"/>  
                  </FlexColumn2>  
 
                  <FlexColumn2 margin={`0px 0px 10px 0px`}> 
@@ -367,6 +367,6 @@ const ModalBody = styled.div`
 
 `
 
-export default ResetStudentPassword; 
+export default ResetLecturerPassword; 
 
 

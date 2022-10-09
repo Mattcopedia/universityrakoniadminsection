@@ -1,12 +1,114 @@
 import Sidebar from 'components/Sidebar';
-import React,{useState} from 'react'
+import React,{useState, Fragment} from 'react'
 import styled from "styled-components"; 
+import data from "./Mock-data.json";
+import ReadOnlyRow from "./ReadOnlyRow";
+
 
 
 const LecturerList = () => {
+    const [query, setQuery] = useState("")
+
+    const keys = ["fullName", "userId", "department","email", "phoneNumber", "role"]
 
     const [shouldshow, setShouldshow] = useState(false);
     const [submit, setSubmit] = useState(false);
+
+
+    const [contacts, setContacts] = useState(data);
+
+    const [editFormData, setEditFormData] = useState({
+      fullName: "",
+      userId: "",
+      phoneNumber: "",
+      email: "",
+      department: "",
+      role: "",
+    });
+
+    const [editContactId, setEditContactId] = useState(null);
+
+    const handleEditFormChange = (event) => {
+      event.preventDefault();
+  
+      const fieldName = event.target.getAttribute("name");
+      const fieldValue = event.target.value;
+  
+      const newFormData = { ...editFormData };
+      newFormData[fieldName] = fieldValue;
+  
+      setEditFormData(newFormData);
+    };
+
+
+
+    const handleEditFormSubmit = (event) => {
+      event.preventDefault();
+  
+      const editedContact = {
+        id: editContactId,
+        fullName: editFormData.fullName,
+        department: editFormData.department,
+        userId: editFormData.userId,
+        phoneNumber: editFormData.phoneNumber,
+        email: editFormData.email,
+        role: editFormData.role,
+      };
+  
+      const newContacts = [...contacts];
+  
+      const index = contacts.findIndex((contact) => contact.id === editContactId);
+  
+      newContacts[index] = editedContact;
+  
+      setContacts(newContacts);
+      setEditContactId(null);
+    };
+
+
+
+
+
+
+    const handleEditClick = (event, contact) => {
+      event.preventDefault();
+      setEditContactId(contact.id);
+  
+      const formValues = {
+        fullName: contact.fullName,
+        department: contact.department,
+        userId: contact.userId,
+        phoneNumber: contact.phoneNumber,
+        email: contact.email,
+        role: contact.role,
+      };
+  
+      setEditFormData(formValues);
+    };
+  
+    const handleCancelClick = () => {
+      setEditContactId(null);
+    };
+  
+    const handleDeleteClick = (contactId) => {
+      const newContacts = [...contacts];
+  
+      const index = contacts.findIndex((contact) => contact.id === contactId);
+  
+      newContacts.splice(index, 1);
+  
+      setContacts(newContacts);
+    };
+
+
+const search = (contact) => {
+  return contact.filter(
+    (item) => 
+      keys.some((key) => item[key].toLowerCase().includes(query))
+  );
+};
+
+
 
   return (
     <>
@@ -73,103 +175,81 @@ const LecturerList = () => {
   {/* here */}
 
   <div className='ml-3 flex justify-start'>
-  <EditProfileRoot>List of all Staff in the department</EditProfileRoot>
+  <EditProfileRoot>List of all Staff </EditProfileRoot>
   </div>
 
   <div className='flex flex-row gap-2 justify-end mr-2'>
 
   <RectangleRootRoot>
       <Image1 src={`https://file.rendit.io/n/WOYHGlmF8wVVWkrvRppv.svg`} />
-      <Text1 placeholder={`Search`} />
+      <Text1 placeholder={`Search`} type="text" onChange={(e) => setQuery(e.target.value)} />
     </RectangleRootRoot>
+
+
+       <div className="level pt-1 mr-5">
+      <select  className='bg-gray-200 '>
+        <option  selected> All </option> 
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+        <option>Level All</option>
+      </select> 
+ 
+    </div>
+
+
 
 
     </div>
 
 
 
-
+  
+     
 
     <div style={{overflowX: "auto"}} className='bg-white mx-3 '> 
-       
+    <form onSubmit={handleEditFormSubmit}>
        <table className='Yourcoursereg mx-auto my-6' style={{width:"100%"}} >    
    <tr style={{height:"40px", backgroundColor: "#e5e5e5"}}>
       
        <th style={{width:"5%",paddingLeft:"10px"}}>S/N</th> 
-       <th style={{width:"15%"}}>Full Name</th> 
-       <th style={{width:"10%"}}>User ID</th> 
-       <th style={{width:"15%"}}>Department</th> 
-       <th style={{width:"17.5%"}}>Email</th> 
-       <th style={{width:"17.5%"}}>Phone number</th> 
-       <th style={{width:"12%"}}>Role</th> 
-       <th style={{width:"4%"}}></th> 
-       <th style={{width:"4%"}}></th> 
+       <th style={{paddingLeft:"10px",width:"15%"}}>Full Name</th> 
+       <th style={{paddingLeft:"10px",width:"7%"}}>User ID</th> 
+       <th style={{paddingLeft:"10px",width:"15%"}}>Department</th> 
+       <th style={{paddingLeft:"10px",width:"15.5%"}}>Email</th> 
+       <th style={{paddingLeft:"10px",width:"15.5%"}}>Phone number</th> 
+       <th style={{paddingLeft:"10px",width:"7%"}}>Role</th> 
+       <th style={{paddingLeft:"10px",width:"7%"}}></th> 
+       <th style={{paddingLeft:"10px",width:"7%"}}></th> 
       
-   </tr>    
+   </tr>  
 
-   <tr style={{height:"70px"}}> 
-       <td style={{paddingLeft:"10px"}}><label> <Text3>1</Text3></label></td>
-       <td ><label><Text3>Ayomide Akinyemi</Text3></label></td>
-       <td><label><Text3>AyFelix</Text3></label></td>
-       <td><label><Text3>Computer Science</Text3></label></td>
-       <td><label><Text3>Ay.Akinyemi.ng.com</Text3></label></td> 
-       <td><label><Text3>08115659040</Text3></label></td>
-       <td><label><Text3>Lecturer</Text3></label></td>
-       <td><label> <Image1w src={`https://file.rendit.io/n/aIETGJBavFzwQQbRItRl.svg`} />    </label></td>
-       <td><label> <Image2w src={`https://file.rendit.io/n/QUmyxyKP3Y1qGXDYg88R.svg`} />  </label></td>
-   </tr> 
+     <tbody>
 
-   <tr style={{height:"70px", backgroundColor: "#e5e5e5"}}> 
-       <td style={{paddingLeft:"10px" }}><label> <Text3>2</Text3></label></td>
-       <td ><label><Text3>Ayomide Akinyemi</Text3></label></td>
-       <td><label><Text3>AyFelix</Text3></label></td>
-       <td><label><Text3>Computer Science</Text3></label></td>
-       <td><label><Text3>Ay.Akinyemi.ng.com</Text3></label></td> 
-       <td><label><Text3>08115659040</Text3></label></td>
-       <td><label><Text3>Lecturer</Text3></label></td>
-       <td><label> <Image1w src={`https://file.rendit.io/n/aIETGJBavFzwQQbRItRl.svg`} />    </label></td>
-       <td><label> <Image2w src={`https://file.rendit.io/n/QUmyxyKP3Y1qGXDYg88R.svg`} />  </label></td>
-   </tr> 
+     
+              <Fragment>
+               
+                  <ReadOnlyRow
+                    // contact={contact} 
+                    contact={search(contacts)} 
+                    handleEditClick={handleEditClick}
+                    handleDeleteClick={handleDeleteClick} 
+                    editFormData={editFormData}
+                    handleEditFormChange={handleEditFormChange}
+                    handleCancelClick={handleCancelClick}
+                    editContactId={editContactId}
+                  />
+                
+              </Fragment>
+          
+         
 
-   <tr style={{height:"70px"}}> 
-       <td style={{paddingLeft:"10px"}}><label> <Text3>3</Text3></label></td>
-       <td ><label><Text3>Ayomide Akinyemi</Text3></label></td>
-       <td><label><Text3>AyFelix</Text3></label></td>
-       <td><label><Text3>Computer Science</Text3></label></td>
-       <td><label><Text3>Ay.Akinyemi.ng.com</Text3></label></td> 
-       <td><label><Text3>08115659040</Text3></label></td>
-       <td><label><Text3>Lecturer</Text3></label></td>
-       <td><label> <Image1w src={`https://file.rendit.io/n/aIETGJBavFzwQQbRItRl.svg`} />    </label></td>
-       <td><label> <Image2w src={`https://file.rendit.io/n/QUmyxyKP3Y1qGXDYg88R.svg`} />  </label></td>
-   </tr> 
-
-   <tr style={{height:"70px", backgroundColor: "#e5e5e5"}}> 
-       <td style={{paddingLeft:"10px"}}><label> <Text3>4</Text3></label></td>
-       <td ><label><Text3>Ayomide Akinyemi</Text3></label></td>
-       <td><label><Text3>AyFelix</Text3></label></td>
-       <td><label><Text3>Computer Science</Text3></label></td>
-       <td><label><Text3>Ay.Akinyemi.ng.com</Text3></label></td> 
-       <td><label><Text3>08115659040</Text3></label></td>
-       <td><label><Text3>Lecturer</Text3></label></td>
-       <td><label> <Image1w src={`https://file.rendit.io/n/aIETGJBavFzwQQbRItRl.svg`} />    </label></td>
-       <td><label> <Image2w src={`https://file.rendit.io/n/QUmyxyKP3Y1qGXDYg88R.svg`} />  </label></td>
-   </tr> 
-
-   <tr style={{height:"70px"}}> 
-       <td style={{paddingLeft:"10px"}}><label> <Text3>5</Text3></label></td>
-       <td ><label><Text3>Ayomide Akinyemi</Text3></label></td>
-       <td><label><Text3>AyFelix</Text3></label></td>
-       <td><label><Text3>Computer Science</Text3></label></td>
-       <td><label><Text3>Ay.Akinyemi.ng.com</Text3></label></td> 
-       <td><label><Text3>08115659040</Text3></label></td>
-       <td><label><Text3>Lecturer</Text3></label></td>
-       <td><label> <Image1w src={`https://file.rendit.io/n/aIETGJBavFzwQQbRItRl.svg`} />    </label></td>
-       <td><label> <Image2w src={`https://file.rendit.io/n/QUmyxyKP3Y1qGXDYg88R.svg`} />  </label></td>
-   </tr> 
-
+      
+          </tbody>  
 
       </table>
-    
+
+      </form>
 
 </div>
 
@@ -274,15 +354,7 @@ width: 89px;
 height: 89px;
 `;
 
-const Text3 = styled.div`
-  mix-blend-mode: normal;
-  font-size: 17px;
-  font-family: Roboto;
-  line-height: 21px;
-  color: #787878;
-  text-align: left;
- 
-`;
+
 
 
 const EditProfileRoot = styled.div`
@@ -297,16 +369,7 @@ const EditProfileRoot = styled.div`
   padding-top: 20px;
 `;
 
-const Image1w = styled.img`
-  width: 9px;
-  height: 12px;
-  align-self: flex-start;
-  margin: 3px 0px 0px 0px;
-`;
-const Image2w = styled.img`
-  width: 10px;
-  height: 13px;
-`;
+
 
 
 const ModalBackground = styled.div`
@@ -420,5 +483,16 @@ const RoyalPurpleTextw = styled.div`
 
 
 
-
 export default LecturerList
+
+
+
+
+
+
+
+
+
+
+
+

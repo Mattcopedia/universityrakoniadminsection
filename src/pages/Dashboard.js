@@ -1,8 +1,8 @@
 
        import React from "react"; 
-       import { NavLink } from 'react-router-dom';
        import styled from "styled-components";
        import Sidebar from "components/Sidebar";
+       import Stats from ".././assets/img/stats.PNG"
     
       import "../components/br.css"
 
@@ -25,13 +25,13 @@ export default function Dashboard() {
 
               {/* <img width={700} src={welcomeone} alt="welcome" /> */}
                 
-              <FlexColumn>
+              <FlexColumn1>
                 <FlexRow>
-                  <Text10>Welcome Back</Text10>
+                  <Text10>Rakoni Admin</Text10>
                   <Text20>🚀</Text20>
                 </FlexRow>
-                <Text30>Admin Name <br className="responsivemodal"></br> </Text30>
-              </FlexColumn>  
+                <Text30>Admin Name<br className="responsivemodal"></br> </Text30>
+              </FlexColumn1>  
 
 
               </div>
@@ -47,186 +47,102 @@ export default function Dashboard() {
               </div>
               </div>
 
-              
-          
-                <div class="flex flex-wrap gap-x-2 ml-6">
 
-  <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 ">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>100 Level</Levelop>
-        <Element1op>202</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/CXMunalQCSIZ2lH14TgK.svg`} />
-    </RectangleRootRootop>
-    </div>
-
-  <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 ">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>200 Level</Levelop>
-        <Element1op>321</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/fPIRTJZKK9GJOY6zv72j.svg`} />
-    </RectangleRootRootop>
-    </div>
-  <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/6 mb-4 ">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>300 Level</Levelop>
-        <Element1op>134</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/pBJYuprRVMcwairWFDwN.svg`} />
-    </RectangleRootRootop>
-    </div>
-  <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/6 mb-4 ">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>400 Level</Levelop>
-        <Element1op>239</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/tfD20vrnAt1nx37DOTRC.svg`} />
-    </RectangleRootRootop>
-    </div> 
-
-    <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 ">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>500 Level</Levelop>
-        <Element1op>221</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/gTDjZXuWrardoNPLyRuv.svg`} />
-    </RectangleRootRootop>
-    </div>
-
-    <div class="w-full flex justify-center sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
-  <RectangleRootRootop>
-      <FlexColumnop>
-        <Levelop>Total Lecturers</Levelop>
-        <Element1op>367</Element1op>
-      </FlexColumnop>
-      <Image1op src={`https://file.rendit.io/n/s0thGrZ5M9N6SmKyCP0E.svg`} />
-    </RectangleRootRootop>
-    </div>
-</div>
-              
-        
-           
-           <h1 className="text-left mx-7 text-indigo-900 font-black text-lg">Student Quick Access</h1>     
-
-           <div className="mx-7 my-4 ">
-            <div className="container  mx-auto mb-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="flex justify-center text-6xl border-2   p-6 bg-gray-100   ">  
-
-                    <NavLink to="/biodata-correction"> 
-                           <WhiteFlexColumnRoot1>
-                            <Image2 src={`https://file.rendit.io/n/Ug0DRo3A0kedp4xCa5Ua.svg`} />
-                            <Text2>Biodata Correction</Text2>
-                            </WhiteFlexColumnRoot1>   
-                            </NavLink>  
-                  
-                    </div> 
-
-
-
-                  
-  <div className="flex  justify-center text-6xl border-2 bg-gray-100 p-6 ">
-                        
-              <NavLink to="/upload-student-doc"> 
-                        <WhiteFlexColumnRoot1> 
-                       <Image2 src={`https://file.rendit.io/n/RfZB8C0HwERiS7g1b1Qm.svg`} />
-                        <Text2>Retrospective Student</Text2>
-                        </WhiteFlexColumnRoot1>   
-                        </NavLink>       
-                        
-       
-                        </div>
-                  
-                            
-
-                    <div className="flex justify-center text-6xl border-2 bg-gray-100   p-6 ">
-
-                    <NavLink to="/unblock"> 
-                    <WhiteFlexColumnRoot1>
-                        <Image2 src={`https://file.rendit.io/n/qMCkGp8Dcf7LYxtebaXw.svg`} />
-                        <Text2>Block/Unblock Student</Text2>
-                        </WhiteFlexColumnRoot1>
-                        </NavLink>    
-                     
-
-                    </div> 
-
-                    <div className="flex justify-center text-6xl border-2 -300 bg-gray-100  p-6 ">
-                    
-                    <NavLink to="/reset-studentpassword"> 
-                            <WhiteFlexColumnRoot1>
-                       <Image2 src={`https://file.rendit.io/n/M623RGZnE7ubrrLY83sk.svg`} />
-                       <Text2>Reset password</Text2> 
-                         </WhiteFlexColumnRoot1>  
-                         </NavLink> 
-                            </div>
-
-                </div>
-                  </div> 
-
-                  <h1 className="text-left  mb-3  text-indigo-900 font-black text-lg">Lecturer Quick Access</h1>
+              <div className="mx-7 my-4 ">
                    
-                   <div className="container mx-auto mb-4"> 
+                   <div className="container mx-auto mb-4 bg-gray-100 "> 
                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                       
+                           <div className="flex justify-center text-6xl border-2 -300 bg-gray-100  p-6 ">
+                            
+                           <NeonCarrotFlexRow>
+                    <FlexColumn width={`148px`}>
+                        <Text1>Active User</Text1>
+                        <Text2>104</Text2>
+                        </FlexColumn>
+                        <Image1 src={`https://file.rendit.io/n/rdHMQezg1KzIaMJDvrJR.svg`} />
+                    </NeonCarrotFlexRow>
+                           
+                           </div>
                             
                                  
                                 
                            <div className="flex justify-center text-6xl border-2  bg-gray-100 p-6 ">
-                           <NavLink to="/create-account"> 
-                           <WhiteFlexColumnRoot1>
-                            <Image2 src={`https://file.rendit.io/n/bBgdwvuBNYK2RO3UM0OI.svg`} />
-                            <Text2>Create Account</Text2>
-                            </WhiteFlexColumnRoot1>   
-                            </NavLink>
+                              
+                           <NeonCarrotFlexRow>
+                    <FlexColumn width={`160px`}>
+                        <Text1>De-activated User</Text1>
+                        <Text2>10</Text2>
+                        </FlexColumn>
+                        <Image1 src={`https://file.rendit.io/n/jGQZQJGhosd5LZaDfLgQ.svg`} />
+                    </NeonCarrotFlexRow>
+
+                         
+
                            </div>
                          
+                           <div className="flex flex-row justify-center text-6xl border-2 bg-gray-100   p-6 ">
+
+                           <NeonCarrotFlexRow>
+                    <FlexColumn width={`148px`}>
+                        <Text1>New Request</Text1>
+                        <Text2>5</Text2>
+                        </FlexColumn>
+                        <Image1 src={`https://file.rendit.io/n/JmmAp0klWVKBPSsMCdGK.svg`} />
+                    </NeonCarrotFlexRow>
 
 
-
-                           <div className="flex justify-center text-6xl border-2  bg-gray-100 p-6 ">
                           
-                           <NavLink to="/lecturer-biodata"> 
-                           <WhiteFlexColumnRoot1>
-                            <Image2 src={`https://file.rendit.io/n/Ug0DRo3A0kedp4xCa5Ua.svg`} />
-                            <Text2>Biodata Correction</Text2>
-                            </WhiteFlexColumnRoot1>   
-                            </NavLink>
-                         
+
+
                                </div>
        
        
-                           <div className="flex justify-center text-6xl border-2  bg-gray-100 p-6 "> 
-                           <NavLink to="/lecturer-list"> 
-                           <WhiteFlexColumnRoot1>
-                            <Image2  src={`https://file.rendit.io/n/QkJnTlHMjbjQpEHdGlYb.svg`} />
-                            <Text2>Lecturer's List</Text2>
-                            </WhiteFlexColumnRoot1>   
-                            </NavLink>
-                           </div>
+                           <div className="flex justify-center text-6xl border-2 bg-gray-100 p-6 "> 
 
-                           <div className="flex  justify-center text-6xl border-2 bg-gray-100 p-6 ">
-                        
-                           
-                           <NavLink to="/reset-lecturer-password"> 
-                        <WhiteFlexColumnRoot1> 
-                       <Image2 src={`https://file.rendit.io/n/M623RGZnE7ubrrLY83sk.svg`} />
-                        <Text2>Password reset</Text2>
-                        </WhiteFlexColumnRoot1>
-                        </NavLink>      
-                        
-       
-                        </div> 
+                           <NeonCarrotFlexRow>
+                    <FlexColumn width={`148px`}>
+                        <Text1>New Chat</Text1>
+                        <Text2>4</Text2>
+                        </FlexColumn>
+                        <Image1 src={`https://file.rendit.io/n/oVYFchfJYZHm18LyKBc6.svg`} />
+                    </NeonCarrotFlexRow>
+
+                           </div>
                             
                        </div>
                          </div>
                          </div>  
+              
+              <section className=" mb-4 body-font overflow-hidden lg:mr-0 mr-3"> 
+      <div className="container ">
+    <div className="flex flex-wrap gap-3  ">
+      <div className=" md:w-1/2 flex flex-col pb-2 -m-5 items-start">
+        <div className="flex items-center flex-wrap ml-9 w-full">
+
+        <h1 className="text-left mx-7 text-indigo-900 font-medium text-lg mt-5">New User</h1>  
+         <img  width={500} height={700} src={Stats} alt="Student Affairs" />
+        </div>
+      </div>
+
+      <div className="md:w-1/2 flex flex-col items-start ">
+        <div className="flex items-center flex-wrap ml-5 w-full mt-3 lg:mt-0">
+          
+        <h1 className="text-left mx-7 text-indigo-900 font-medium text-lg">Active User</h1>  
+         <img width={500} height={700} src={Stats} alt="Student Affairs" />
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+              
+        
+           
+            
+
+            
 
                          <div>
 
@@ -260,42 +176,13 @@ export const devices = {
 
 
 
-const WhiteFlexColumnRoot1 = styled.div`
-
-  border-style: solid;
-  height: 170px;
-  color: #fafafa; 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 26.78px;
-  align-items: center;
-  border-radius: 6px;
-  padding: 34px 96.78px 34px 97px;
-
-  margin-left: 10px;  
-  margin-right: 10px;  
-`;
-const Image2 = styled.img`
-
-width: 55.22px;
-height: 55.22px;
-`;
-const Text2 = styled.div`
-white-space: nowrap;
-display: inline-block;
-text-align: left;
-font-size: 18px;
-font-family: Roboto;
-line-height: 27.09px;
-color: #2d0353; 
-`;
 
 
 
 
 
-const FlexColumn = styled.div`
+
+const FlexColumn1 = styled.div`
   align-self: stretch;
   width: 318px;
   display: flex;
@@ -356,45 +243,45 @@ const Text40 = styled.div`
 
 
 
-const RectangleRootRootop = styled.div`
-  gap: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: rgba(7, 72, 94, 0.1);
-  border-radius: 10px;
-  padding: 12px 16px 11px 21px;
-`;
-const FlexColumnop = styled.div`
-  width: 95px;
-  height: 71px;
-  gap: 3px;
+
+const FlexColumn = styled.div`
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-self: stretch;
+  gap: 13px;
+  flex-grow: 1;
+  align-items: center;
+  width: ${(props) => props.width};
+`;
+const Text1 = styled.div`
+  font-size: 18px;
+  font-family: Roboto;
+  line-height: 27.09px;
+  color: #505050;
+`;
+const Text2 = styled.div`
+  font-size: 36px;
+  font-family: Roboto;
+  line-height: 54.18px;
+  color: #505050;
+  align-self: flex-start;
+`;
+
+const NeonCarrotFlexRow = styled.div`
+  width: 239px;
+  background-color: #E9F4EE;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 31px;
   align-items: flex-start;
+  border-radius: 10px;
+  padding: 18px 15px 17px 15px;
 `;
-const Levelop = styled.div`
-  color: #505050;
-  font-size: 14px;
-  font-family: Roboto;
-  line-height: 21px;
-  white-space: nowrap;
-`;
-const Element1op = styled.div`
-  width: 95px;
-  height: 39px;
-  align-self: stretch;
-  color: #505050;
-  font-size: 30px;
-  font-family: Roboto;
-  line-height: 45.15px;
-`;
-const Image1op = styled.img`
-  width: 36px;
-  height: 36px;
+const Image1 = styled.img`
+  width: 50px;
+  height: 50px;
 `;
 
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from "styled-components";  
 import AdminNavbar from './AdminNavbar';
-import { Link, NavLink } from "react-router-dom";  
+import {NavLink} from "react-router-dom";  
 import Button from '@material-tailwind/react/Button';
 import Icon from '@material-tailwind/react/Icon';  
 import "./br.css"
@@ -48,8 +48,8 @@ export default function Sidebar() {
                   <ImageRoot src={unigig}  /> 
                   </NavLink>
      
-                  <NavLink to="/create-new-account" >
-                  <WhiteFlexRow>
+                  <NavLink to="/create-rakoni-account" >
+                  <WhiteFlexRow onClick={() => setShowSidebar('-left-64')}>
                 <Image1a src={`https://file.rendit.io/n/7OUSS3WQDM8590MQKxa2.svg`} />
                 <Text2a>Create Account</Text2a> 
               </WhiteFlexRow>
@@ -57,7 +57,7 @@ export default function Sidebar() {
 
                      <div className='focus:blue'>
                      <NavLink to="/" exact  >
-                  <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
                     <NeonCarrotRectangle margin={`0px 21px 0px 0px`} />
                   
                     <Image1 src={`https://file.rendit.io/n/wf2zhCB3LkjFgVLkb6SX.svg`} />
@@ -69,115 +69,13 @@ export default function Sidebar() {
              
                      </div>
 
-                     {/* className='text-xs leading-4 flex flex-row pr-11 mr-9 text-white focus:text-red-500 hover:text-red-500' */}
-               
-
-            
-                  <FlexRow2 margin={`0px 0px 33px 0px`} >
-                  <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
-                      <div className='text-xs leading-4 flex flex-row pr-11 mr-9 text-white focus:text-red-500 hover:text-red-500'>
-                 
-                  <div className="dropdown ">
-                    <button className="dropbtn flex flex-row">
-                    <Image2 src={`https://file.rendit.io/n/G3F4PilonKjmmoO3vusP.svg`}  /> 
-                      <Text2>Student</Text2> 
-                    </button>
-                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')} >
-                      <Link to="/activate">Activate</Link>
-                      <Link to="/register-student">Register Student</Link>
-                      <Link to="/course-reg-stats">Registration Stats</Link>
-                      <Link to="/unblock">Unblock</Link>
-                      <Link to="/biodata-correction">Biodata Correction</Link>
-                      <Link to="/reset-studentpassword">Reset Password</Link>
-                      <Link to="/upload-student-doc">Restrospective Registration</Link>
-                    </div>
-                  </div> 
-
-                      </div> 
-                    <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
-                  </FlexRow2>
- 
-                  <FlexRow2 margin={`0px 0px 33px 0px`} >
-                  <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
-                      <div className='text-xs leading-4 flex flex-row pr-11 mr-9 text-white focus:text-red-500 hover:text-red-500'>
-                      <div className="dropdown ">
-                    <button className="dropbtn flex flex-row">
-                    <Image2 src={`https://file.rendit.io/n/oPso6bQAGSo5jamPAFQx.svg`} /> 
-                    <Text2>Lecturer</Text2> 
-                    </button>
-                    <div  className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
-                    <Link to="/lecturer-activate">Activate</Link>
-                      <Link to="/lecturer-list">Lecturer List</Link>
-                      <Link to="/create-account">Create Account</Link>
-                      <Link to="/lecturer-biodata">Biodata Correction</Link>
-                      <Link to="/reset-lecturer-password">Reset Password</Link>
-                      <Link to="/reset-upload-quota">Reset Upload Quota</Link>
-                     
-                    </div>
-                  </div> 
-                      </div> 
-                    <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
-                  </FlexRow2>
-          
-
-               
-                  <FlexRow2 margin={`0px 0px 33px 0px`} >
-                  <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
-                      <div className='text-xs leading-4 flex flex-row pr-12 mr-0.5 text-white focus:text-red-500 hover:text-red-500'>
-                      <div className="dropdown " >
-                    <button className="dropbtn flex flex-row">
-                    <Image2 src={`https://file.rendit.io/n/TjbIpolco2NXf4vdOE1s.svg`} /> 
-                    <Text2>Master Sheet</Text2> 
-                    </button> 
-                    <div className="dropdown-content" onClick={() => setShowSidebar('-left-64')}>
-                      <Link to="/master-sheet">Master Sheet</Link>
-                      <Link to="/master-sheetmode">Master Sheet Mode</Link>
-                    </div>
-                  </div>  
-                      </div> 
-                    <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} />
-                  </FlexRow2>
-
-                  <FlexRow2 margin={`0px 0px 33px 0px`} >
-                  <NeonCarrotRectangle margin={`0px 0px 0px 0px`} />                          
-                      <div className='text-xs leading-4 flex flex-row pr-3 mr-0.5 text-white focus:text-red-500 hover:text-red-500'>
-                      <div className="dropdown " >
-                    <button className="dropbtn flex flex-row">
-                    <Image2 src={`https://file.rendit.io/n/GnPut5ckDFay6QEsO4n7.svg`}  /> 
-                    <Text2>Administrative Portal</Text2> 
-                    </button> 
-                    <div style={{overflowY: "scroll", height: "170px"}} className="dropdown-contentadmin" onClick={() => setShowSidebar('-left-64')}>
-                      <Link to="/setcountdown">Set Registration Countdown</Link>
-                      <Link to="/showresult">Show Result</Link>
-                      <Link to="/showlecturer">Show Lecturer</Link>
-                      <Link to="/public-service">Public Service Announcement</Link>
-                      <Link to="/public-service-edition">Public Service Edition</Link>
-                      <Link to="/activate-new-semester">Activate New Semester</Link>
-                      <Link to="/bulk-sms">Bulk Sms</Link>
-                      <Link to="/bulk-sms-edition">Bulk Sms Edition</Link>
-                      <Link to="/import-new-student">Import New Student</Link>
-                      <Link to="/create-new-department">Create New Department</Link>
-                      <Link to="/create-new-programme">Create New Programme</Link>
-                      <Link to="/create-new-course">Create New Course</Link>
-                    </div>
-
-                
-
-
-                  </div>  
-                      </div> 
-                    {/* <Image4 src={`https://file.rendit.io/n/1udbBvAlXi9KxoIN8Mpq.svg`} /> */}
-                  </FlexRow2>
-             
-
-                  <div className='focus:blue'>
-                     <NavLink to="/settings-profile" exact  >
-                  <FlexRow2 margin={`0px 0px 33px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                     <div className='focus:blue'>
+                     <NavLink to="/setup-database-profile" exact  >
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
                     <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
                   
-                    <Image1 src={`https://file.rendit.io/n/XsTeL2ZFeiX6rPItCZ1V.svg`} />
-                    <Text2  margin={`0px 88px 0px 0px`}  >
-                      Settings</Text2> 
+                    <Image1 src={`https://file.rendit.io/n/2Iqy0d4lFfqeAt1AAFyK.svg`} />
+                    <Text2  margin={`0px 45px 0px 0px`}  > Set up Database</Text2> 
              
                   </FlexRow2> 
                   </NavLink>   
@@ -185,10 +83,93 @@ export default function Sidebar() {
                      </div>
 
 
-              
+                     <div className='focus:blue'>
+                     <NavLink to="/create-sub-domain" exact  >
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                    <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
+                  
+                    <Image1 src={`https://file.rendit.io/n/oeNYp8KzG7eO9llRgEBI.svg`} />
+                    <Text2  margin={`0px 70px 0px 0px`}  > Sub-domain</Text2> 
+             
+                  </FlexRow2>  
+                  </NavLink>   
+             
+                     </div>
+
+                     <NavLink to="/new-request-details" exact  >
+                         <FlexRow7>
+                  <FlexRow8>
+                    <WhiteRectangle />
+
+                    <Image3 src={`https://file.rendit.io/n/RiHraye6ykgVBkmjYrCg.svg`} />
+                    <Text3>New Request</Text3>
+                  </FlexRow8>
+                  <FlexColumn2>
+                    <NeonCarrotRectangle2 />
+                    <Text7>4</Text7>
+                  </FlexColumn2>
+                </FlexRow7>
+                </NavLink>
+
+            
 
 
 
+
+                     <div className='focus:blue'>
+                     <NavLink to="/activate-universityprofile" exact  >
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                    <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
+                  
+                    <Image1 src={`https://file.rendit.io/n/m4CBEsJTWUcsPOt7f6Dj.svg`}/>
+                    <Text2  margin={`0px 27px 0px 0px`}  > Activate/Deactivate</Text2> 
+             
+                  </FlexRow2> 
+                  </NavLink>   
+             
+                     </div>
+
+
+                     <div className='focus:blue'>
+                     <NavLink to="/routine-check" exact  >
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                    <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
+                  
+                    <Image1 src={`https://file.rendit.io/n/PkrQdzit8HdJYssUFtjX.svg`} />
+                    <Text2  margin={`0px 58px 0px 0px`}  > Routine Check</Text2> 
+             
+                  </FlexRow2> 
+                  </NavLink>   
+             
+                     </div>
+
+
+                     <FlexRow71>
+                  <FlexRow81>
+                    <WhiteRectangle />
+                    <Image31 src={`https://file.rendit.io/n/NnZ32NUgGZ2odJrfh42S.svg`} />
+                    <WhiteRectangle1 />
+                    
+                    <Text32>Chat Bot</Text32>
+                  </FlexRow81>
+                  <FlexColumn20>
+                    <NeonCarrotRectangle2 />
+                    <Text70>2</Text70>
+                  </FlexColumn20>
+                </FlexRow71>
+
+                     <div className='focus:blue'>
+                     <NavLink to="/password-reset" exact  >
+                  <FlexRow2 margin={`0px 0px 26px 0px`} onClick={() => setShowSidebar('-left-64')}>
+                    <NeonCarrotRectangle margin={`0px 1px 0px 0px`} />
+                  
+                    <Image1 src={`https://file.rendit.io/n/6oPVdMsd0HvcFxT8YfDh.svg`} />
+                    <Text2  margin={`0px 52px 0px 0px`}  > Password Reset</Text2> 
+             
+                  </FlexRow2> 
+                  </NavLink>   
+             
+                     </div>
 
                   
                 </PlumFlexColumn> 
@@ -211,7 +192,7 @@ padding-bottom:20px;
 
 const NeonCarrotRectangle = styled.div`
   width: 2px;
-  height: 22px;
+  height: 0px;
   background-color: #df8909;
   opacity: 0;
   margin: ${(props) => props.margin};
@@ -232,12 +213,7 @@ const Text2 = styled.a`
   }
 
 `;
-const Image2 = styled.img`
-  width: 17px;
-  height: 17px;
-  align-self: flex-end;
-  margin: 0px 18px 2px 0px;
-`;
+
 const FlexRow2 = styled.div`
   width: 214px;
   display: flex;
@@ -255,21 +231,6 @@ const FlexRow2 = styled.div`
   }
 
 
-`;
-
-const Image4 = styled.img`
-  width: 6px;
-  height: 9px;
-  align-self: flex-end;
- 
-  margin: 0px 0px 6px 0px;
-  &:hover {
-    color: #df8909; 
-  }
-
-  &:focus {
-    color: #df8909; 
-  }
 `;
 
 
@@ -339,3 +300,162 @@ const Text2a = styled.div`
 `;
 
 
+
+
+const WhiteRectangle = styled.div`
+  width: 3px;
+  height: 22px;
+  background-color: rgba(256, 256, 255, 0);
+`;
+const WhiteRectangle1 = styled.div`
+  width: 30px;
+  height: 22px;
+  background-color: rgba(256, 256, 255, 0);
+`;
+const Text3 = styled.div`
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Roboto;
+  line-height: 18px;
+  white-space: nowrap;
+  padding-right:9px;
+  cursor:pointer;
+  
+   
+  &:hover {
+    color: #df8909; 
+  }
+
+  &:focus {
+    color: #df8909; 
+  }
+  `;
+const Text32 = styled.div`
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Roboto;
+  line-height: 18px;
+  white-space: nowrap;
+  padding-right:9px;
+  cursor:pointer;
+   
+  &:hover {
+    color: #df8909; 
+  }
+
+  &:focus {
+    color: #df8909; 
+  }
+`;
+const Image3 = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right:13px;
+
+
+   
+  &:hover {
+    color: #df8909; 
+  }
+
+  &:focus {
+    color: #df8909; 
+  }
+`;
+
+const Image31 = styled.img`
+  width: 20px;
+  height: 20px;
+
+   
+  &:hover {
+    color: #df8909; 
+  }
+
+  &:focus {
+    color: #df8909; 
+  }
+`;
+
+const Text7 = styled.div`
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  white-space: nowrap;
+`;
+
+const Text70 = styled.div`
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 21px;
+  white-space: nowrap;
+  
+`;
+
+
+const FlexRow7 = styled.div`
+  gap: 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 25px 0px;
+  margin-top:0px;
+`;
+const FlexRow71 = styled.div`
+  gap: 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 23px 0px;
+`;
+const FlexRow8 = styled.div`
+  width: 106px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const FlexRow81 = styled.div`
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right:25px;
+`;
+const FlexColumn2 = styled.div`
+  width: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+  padding: 0px 9px;
+`;
+
+const FlexColumn20 = styled.div`
+  width: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+  padding: 0px 9px;
+ 
+`;
+
+const NeonCarrotRectangle2 = styled.div`
+  width: 26px;
+  height: 18px;
+  left: 0px;
+  top: 1px;
+  position: absolute;
+  border-radius: 10.5px;
+  background-color: #df8909;
+`;

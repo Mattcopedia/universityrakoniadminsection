@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "Acronym": "FUTA",
+      "University": "Federal University of Technology, Akure",
+      "RegNumber": "Uni/1991/FUTA/112",
+      "Email": "info@futa.edu.ng",
+      "PhoneNumber": "+2348052613220",
+      "Status": "Active"
+    },
+    {
+      "id": 2,
+      "Acronym": "FUTA",
+      "University": "Federal University of Technology, Akure",
+      "RegNumber": "Uni/1991/FUTA/112",
+      "Email": "info@futa.edu.ng",
+      "PhoneNumber": "+2348052613220",
+      "Status": "De-activated"
+    },
+    {
+      "id": 3,
+      "Acronym": "FUTA",
+      "University": "Federal University of Technology, Akure",
+      "RegNumber": "Uni/1991/FUTA/112",
+      "Email": "info@futa.edu.ng",
+      "PhoneNumber": "+2348052613220",
+      "Status": "Active"
+    },
+    {
+      "id": 4,
+      "Acronym": "FUTA",
+      "University": "Federal University of Technology, Akure",
+      "RegNumber": "Uni/1991/FUTA/112",
+      "Email": "info@futa.edu.ng",
+      "PhoneNumber": "+2348052613220",
+      "Status": "De-activated"
+    },
+    {
+      "id": 5,
+      "Acronym": "FUTA",
+      "University": "Federal University of Technology, Akure",
+      "RegNumber": "Uni/1991/FUTA/112",
+      "Email": "info@futa.edu.ng",
+      "PhoneNumber": "+2348052613220",
+      "Status": "Active"
+    }
+  ]

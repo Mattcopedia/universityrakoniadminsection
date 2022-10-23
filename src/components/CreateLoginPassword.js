@@ -2,7 +2,7 @@
 
 import React, {useRef, useEffect, useState } from 'react'
 import styled from "styled-components";  
-import login from "../assets/img/Admin.PNG";
+import login from "../assets/img/Rakoni.PNG";
 import "./br.css"  
 import { useHistory } from "react-router-dom"; 
  
@@ -143,7 +143,7 @@ const onSubmit = (e) => {
             <FlexColumn>
 
             <FlexColumn1>
-            <Text3>Create a new login password</Text3>
+            <Text3>Create a new login password</Text3> 
 
             <form id="createPassword"  onSubmit={onSubmit}>            
 

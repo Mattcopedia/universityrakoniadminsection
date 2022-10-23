@@ -1,7 +1,7 @@
 
 import React, {useRef, useEffect, useState } from 'react'
 import styled from "styled-components";  
-import login from "../assets/img/Admin.PNG"; 
+import login from "../assets/img/Rakoni.PNG"; 
 import "./br.css" 
 import { useHistory } from 'react-router-dom'; 
  
@@ -65,7 +65,7 @@ const Login = () => {
 
                 <form>           
                 <FlexColumn2 margin={`0px 0px 14px 0px`}>
-                    <Text4>Username</Text4>
+                    <Text4>Admin Username</Text4>
                      <input ref={focusDiv} className='form'  value={emailValue}
                 onChange={e => setEmailValue(e.target.value)}
                 type="text" id="Username"/>  

@@ -238,6 +238,17 @@ br.responsive {
     border-width: 0.5px;  
   }
 
+  .formaccount {
+    border-color: #787878;
+    border-style: solid;
+    width: 140px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border-width: 0.5px;  
+  }
+
+
   .formshow {
   
    
@@ -255,6 +266,10 @@ br.responsive {
   }
 
   .form:focus {
+    padding-left: 10px;
+  }
+
+  .formaccount:focus {
     padding-left: 10px;
   }
 
@@ -347,6 +362,12 @@ br.responsive {
     }
 
   .form::placeholder {
+    
+    padding-left: 20px;
+    
+  } 
+
+  .formaccount::placeholder {
     
     padding-left: 20px;
     
@@ -475,6 +496,7 @@ br.responsive {
     justify-content: center;
     border-radius: 8px;
     padding: 10.5px 0px 9.5px 0px;
+    background-color: #219653;
 
    
   }
@@ -486,18 +508,38 @@ br.responsive {
     font-size: 16px;
     font-family: Roboto;
     line-height: 24px;
-    color: yellowgreen; 
+    color: black; 
     border-color: #bc0808;
     border-style: solid;
     width: 140px;
     height: 45px;
-    background-color: #ffff;
+    background-color: gainsboro;
     flex-direction: row;
     justify-content: center;
     padding: 10.5px 0px 9.5px 0px;
     border-width: 0.5px; 
     border-radius: 8px;
   } 
+
+  
+  .editactivate {
+
+    display: flex;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 24px;
+    color: white; 
+    gap:10px;
+    width: 140px;
+    height: 45px;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 10.5px 0px 9.5px 0px;
+    background-color: #bc0909;
+
+   
+  }
 
   
 
@@ -872,6 +914,16 @@ br.responsive {
 
         @media only screen and (max-width: 425px)  {
 
+          .formaccount {
+            border-color: #787878;
+            border-style: solid;
+            width: 280px;
+            height: 35px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            border-width: 0.5px;  
+          }
+
           .boxaccount select {
         
             width: 280px !important; 
@@ -888,6 +940,16 @@ br.responsive {
             border-color: #787878;
             border-style: solid;
             width: 280px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            border-width: 0.5px;  
+            
+
+          }
+          .formaccount {
+            border-color: #787878;
+            border-style: solid;
+            width: 300px;
             background-color: #ffffff;
             border-radius: 6px;
             border-width: 0.5px;  
@@ -928,6 +990,12 @@ br.responsive {
             padding-left: 20px;
             
           }
+
+          .formaccount::placeholder {
+    
+            padding-left: 20px;
+            
+          }
           
           .formshow::placeholder {
     
@@ -937,6 +1005,11 @@ br.responsive {
           } 
 
           .form:focus {
+            padding-left: 8px;
+          }
+
+          
+          .formaccount:focus {
             padding-left: 8px;
           }
              
